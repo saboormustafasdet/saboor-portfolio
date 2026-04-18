@@ -523,7 +523,7 @@ button { cursor: pointer; }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 10px; top: 20px; bottom: 20px;
+  left: 19px; top: 20px; bottom: 20px;
   width: 2px;
   background: linear-gradient(to bottom, var(--cyan), var(--purple), rgba(139,92,246,.08));
   border-radius: 2px;
