@@ -1040,64 +1040,70 @@ button { cursor: pointer; }
 
 /* === MARQUEE STRIP === */
 .marquee-strip {
+  overflow: hidden;
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 0;
-  overflow: hidden;
+  height: 46px;
   position: relative;
-  height: 48px;
-  display: flex;
-  align-items: center;
 }
 .marquee-strip::before,
 .marquee-strip::after {
   content: '';
   position: absolute;
   top: 0; bottom: 0;
-  width: 140px;
+  width: 100px;
   z-index: 2;
   pointer-events: none;
 }
-.marquee-strip::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg-alt) 20%, transparent 100%);
-}
-.marquee-strip::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg-alt) 20%, transparent 100%);
-}
-.marquee-track {
+.marquee-strip::before { left: 0;  background: linear-gradient(to right, var(--bg-alt), transparent); }
+.marquee-strip::after  { right: 0; background: linear-gradient(to left,  var(--bg-alt), transparent); }
+
+/* inner wraps BOTH content blocks side by side */
+.marquee-inner {
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
-  white-space: nowrap;
+  height: 100%;
   width: max-content;
-  animation: marquee-scroll 45s linear infinite;
+  animation: marquee-scroll 38s linear infinite;
   will-change: transform;
 }
-.marquee-track:hover { animation-play-state: paused; }
+.marquee-inner:hover { animation-play-state: paused; }
+
+/* each block = one full set of items, side by side with inner */
+.marquee-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  height: 100%;
+}
+
 @keyframes marquee-scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 .m-item {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 0 24px;
   font-family: var(--mono);
   font-size: .76rem;
   font-weight: 500;
   color: var(--text-muted);
   white-space: nowrap;
   flex-shrink: 0;
+  padding: 0 4px;
   transition: color .2s ease;
-  border-right: 1px solid var(--border);
 }
-.m-item:last-child { border-right: none; }
-.m-item i { color: var(--cyan); font-size: .65rem; flex-shrink: 0; }
-.m-item:hover { color: var(--text); }
+.m-item:hover { color: var(--cyan); }
+.m-sep {
+  color: var(--border-cyan);
+  padding: 0 14px;
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
 
 /* Code window glow on hover */
 .code-window {
