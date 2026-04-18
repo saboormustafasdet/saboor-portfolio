@@ -119,6 +119,41 @@ navLinks.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
+/* === CUSTOM CURSOR === */
+const cursorDot  = document.getElementById('cursorDot');
+const cursorRing = document.getElementById('cursorRing');
+let mouseX = 0, mouseY = 0;
+let ringX  = 0, ringY  = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursorDot.style.left = mouseX + 'px';
+  cursorDot.style.top  = mouseY + 'px';
+});
+
+(function animateRing() {
+  ringX += (mouseX - ringX) * 0.14;
+  ringY += (mouseY - ringY) * 0.14;
+  cursorRing.style.left = ringX + 'px';
+  cursorRing.style.top  = ringY + 'px';
+  requestAnimationFrame(animateRing);
+})();
+
+document.querySelectorAll('a, button, .project-card, .skill-pill, .highlight-card, .cert-card, .meth-item').forEach(el => {
+  el.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
+  el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
+});
+
+document.addEventListener('mouseleave', () => {
+  cursorDot.style.opacity  = '0';
+  cursorRing.style.opacity = '0';
+});
+document.addEventListener('mouseenter', () => {
+  cursorDot.style.opacity  = '1';
+  cursorRing.style.opacity = '1';
+});
+
 /* === ACTIVE NAV LINK ON SCROLL === */
 const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {

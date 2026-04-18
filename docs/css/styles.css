@@ -1008,6 +1008,103 @@ button { cursor: pointer; }
 .footer-links a:hover { color: var(--cyan); background: rgba(0,212,255,.07); }
 .footer-copy { color: var(--text-muted); font-size: .78rem; }
 
+/* === CUSTOM CURSOR === */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: opacity .3s ease;
+}
+.cursor-dot {
+  width: 6px; height: 6px;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan), 0 0 16px rgba(0,212,255,.5);
+  transition: transform .1s ease, opacity .3s ease;
+}
+.cursor-ring {
+  width: 32px; height: 32px;
+  border: 1.5px solid rgba(0,212,255,.5);
+  transition: width .25s ease, height .25s ease, border-color .25s ease, transform .12s ease, opacity .3s ease;
+}
+.cursor-ring.hovered {
+  width: 48px; height: 48px;
+  border-color: var(--cyan);
+  background: rgba(0,212,255,.05);
+}
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* === MARQUEE STRIP === */
+.marquee-strip {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-strip::before,
+.marquee-strip::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-strip::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-alt), transparent);
+}
+.marquee-strip::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-alt), transparent);
+}
+.marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.m-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 28px;
+  font-family: var(--mono);
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+.m-item i { color: var(--cyan); font-size: .7rem; }
+.m-item:hover { color: var(--cyan); }
+
+/* Code window glow on hover */
+.code-window {
+  transition: box-shadow .4s ease;
+}
+.code-window:hover {
+  box-shadow: 0 32px 80px rgba(0,0,0,.6),
+              0 0 0 1px rgba(255,255,255,.06),
+              0 0 40px rgba(0,212,255,.12);
+}
+
+/* Section divider accent line */
+.section::after {
+  content: none;
+}
+
 /* === BACK TO TOP === */
 .back-to-top {
   position: fixed;
