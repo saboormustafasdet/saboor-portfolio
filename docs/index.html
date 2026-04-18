@@ -1,326 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <!-- AOS (Animate On Scroll) Library-->
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Muhammad Shoaib Zahoor</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                </ul>
-            </div>
-        </nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Saboor Mustafa — Senior SDET with 5+ years building scalable automation frameworks for fintech, SaaS and mobile platforms." />
+    <meta name="author" content="Saboor Mustafa" />
+    <title>Saboor Mustafa | Senior SDET</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
 
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about" data-aos="fade-up">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Muhammad Shoaib
-                        Zahoor
-                    </h1>
-                    <div class="subheading mb-5">
-                        R.A Bazar Lahore Cantt        · +92 3428435418 ·
-                        <a href="mailto:zackzahoor81@gmail.com">zackzahoor81@gmail.com</a>
-                    </div>
-                    <p class="lead mb-5">Experienced Software Quality Assurance Engineer with over 2 years of hands-on experience in Manual and Automation Testing. Adept at ensuring software quality and reliability through rigorous testing methodologies, leveraging a deep understanding of both web and mobile application testing. Skilled in using tools like Cypress, Katalon Studio, Appium, and WebdriverIO, along with expertise in API testing using Postman and performance testing with JMeter. Proficient in implementing CI/CD pipelines using GitLab and Jenkins to streamline the testing lifecycle.
-                        Highly capable of crafting detailed test plans, executing test cases, and automating repetitive tasks to boost productivity and efficiency. A proven ability to identify, isolate, and document defects, ensuring seamless functionality and user experience. Passionate about maintaining software excellence by collaborating with cross-functional teams and adopting industry best practices. Excels in working within Agile environments and delivering high-quality deliverables under tight deadlines.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/muhammad-shoaib-zahoor/" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="social-icon" href="https://github.com/MUHAMMAD-Shoaib-zahoor" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a class="social-icon" href="https://wa.me/923428435418" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>                        
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>SM<span class="logo-bracket">/&gt;</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero"           class="nav-link">Home</a></li>
+                <li><a href="#about"          class="nav-link">About</a></li>
+                <li><a href="#experience"     class="nav-link">Experience</a></li>
+                <li><a href="#projects"       class="nav-link">Projects</a></li>
+                <li><a href="#skills"         class="nav-link">Skills</a></li>
+                <li><a href="#certifications" class="nav-link">Certs</a></li>
+                <li><a href="#contact"        class="nav-link contact-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas"></canvas>
+
+        <div class="hero-inner">
+            <!-- Left: content -->
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Open to Remote SDET / QA Roles
                 </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience" data-aos="fade-left">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Automation Engineer</h3>
-                            <div class="subheading mb-3">Blackbox Labz DHA Phase 3</div>
-                            <p>Designed and implemented automated test scripts for web and mobile applications using tools like Cypress, Playwright, Katalon Studio, AI generative Testing, and Appium. Performed functional, regression, and integration testing to ensure high-quality deliverables, collaborating closely with developers to debug and resolve issues. Developed and maintained test automation frameworks, improving test coverage and reducing manual testing efforts by 30%. Conducted API testing using Postman, validating endpoints and ensuring seamless integration with front-end and back-end systems. Executed performance and load testing using JMeter, identifying bottlenecks and optimizing system performance. Contributed to the development pipeline by integrating automated test cases into CI/CD pipelines with GitLab and Jenkins, streamlining software delivery processes. Authored detailed test plans, test cases, and documentation, maintaining a clear record of testing activities and outcomes. Proactively identified and reported defects, ensuring timely resolution to meet project deadlines and client expectations.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">April 2024 - Present</span></div>
-                    </div>
-                    <div class="experience-item d-flex justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Quality Assurance</h3>
-                            <div class="subheading mb-3">Fajar Technologies DHA Phase-3 Lahore Cantt</div>
-                            <p>Conducted comprehensive manual testing of mobile applications, including functional, UI/UX, and regression testing, ensuring seamless user experiences. Collaborated with cross-functional teams to identify and document defects, following Agile methodologies. Automated critical mobile test cases using Appium, enhancing efficiency and reducing repetitive efforts. Delivered detailed test reports and ensured timely resolution of issues to meet release deadlines.</p>
-                        </div>
-                        <div class="flex-shrink-0">
-                            <span class="text-primary">Dec 2022 - March 2024</span>
-                        </div>
-                    </div>
-                    
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education" data-aos="fade-up">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lahore Garrison University DHA Phase-6 Lahore Cantt</h3>
-                            <div class="subheading mb-3">BS-Software Engineering</div>
-                            <div>Software Engineering - Software Automation Track</div>
-                            <p>GPA: 3.33</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2020 - November 2023</span></div>
-                    </div>
+
+                <h1 class="hero-name">
+                    Saboor <span class="gradient-text">Mustafa</span>
+                </h1>
+
+                <div class="hero-title">
+                    <span class="title-prefix">_</span>
+                    <span id="typewriter" class="typewriter"></span><span class="cursor">|</span>
                 </div>
-            </section>
-            <hr class="m-0" />
 
-           <!-- Experience-->
-<section class="resume-section" id="Projects" data-aos="fade-left">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Projects</h2>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">Planera.io</h3>
-                <div class="subheading mb-3">Web Application | Cypress | Version Control | Jira | cypress Cloud </div>
-                <p>Planera is an innovative CPM scheduling tool that simplifies project planning for the construction 
-                    industry with a collaborative and visual whiteboard. As a Software Automation Engineer, I ensure
-                     all test cases are up-to-date using Cypress, leveraging the Page Object Model (POM) for scalable 
-                     test scripts and dynamic locators. I write robust TypeScript assertions for verification and 
-                     validation, maintaining high standards of accuracy. Additionally, utilize version control 
-                     systems for seamless collaboration and run test cases on Cypress Cloud for efficient execution
-                      and reporting. By addressing challenges like automating project creation, also contribute to delivering 
-                      a reliable and user-friendly application.</p>
-            </div>
-        </div>
-        <div class="flex-grow-1">
-            <h3 class="mb-0">Modus</h3>
-            <div class="subheading mb-3">Mobile Application | Appium | WDIO | Browserstack | Github | Azure Devops</div>
-            <p>Managing the configuration of both Android and iOS applications on Sauce Labs and BrowserStack, 
-                ensuring seamless testing across multiple environments. Create APK files and builds tailored
-                for the testing environment. Utilizing Appium's server, also handle interactions with native elements
-                 efficiently, including those that are not visible or clickable, by executing custom JavaScript 
-                 commands. Additionally, focus on implementing the Page Object Model (POM) to structure tests 
-                 effectively, while developing dynamic locators and reusable functions to enhance the robustness
-                  and scalability of automation scripts.</p>
-        </div>
-        <div class="flex-grow-1">
-            <h3 class="mb-0">Scan123</h3>
-            <div class="subheading mb-3">Web Application | Katalon | Manual Testing | Github | Monday.com</div>
-            <p> Website for companies to store and manage their documents, make personal and private folders, and
-                store company information. Nurturing the UI and functionality of the companies records and databases.
-                Execute and create the automated testcases to ensure the working of functionalities.Handle the canvas,
-                file upload, drag and drop, DOM Iframes interaction and number of other interactions and controls for 
-                the smooth performance of the testcases.</p>
-        </div>
-        <div class="flex-grow-1">
-            <h3 class="mb-0">OFTV</h3>
-            <div class="subheading mb-3">Web/ Mobile/ TV Application | Manual Testing | Asana | Slack </div>
-            <p>Conducted comprehensive manual testing of the OFTV app across various platforms, including
-                 Android mobiles and tablets, iOS apps on iPhones and iPads, desktop web applications,
-                  Samsung TVs, and Android TVs. Leading responsibilities involved verifying UI elements 
-                  for consistency and responsiveness, ensuring seamless functionality across devices, 
-                  and validating the media player's performance, such as playback, buffering, 
-                  and resolution handling. I also tested features like navigation, search, and 
-                  account management to ensure a smooth user experience. My testing ensured the app's 
-                  quality, compatibility, and reliability across multiple devices and platforms.</p>
-                 </div>
-             </div>
-        </section>         
-    <hr class="m-0" />
-
-      <!-- Skills Section -->
-<section class="resume-section" id="skills" data-aos="fade-right">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Skills</h2>
-        <div class="subheading mb-3">Programming Languages & Tools</div>
-
-        <div class="skills-icons mb-4">
-            <div class="skill-item">
-                <img src="path/to/Javascript-icon.svg" alt="JavaScript" width="80" height="60">
-                <progress class="skill-progress" value="85" max="100"></progress>
-                <label>JavaScript</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/typescript-icon.svg" alt="TypeScript" width="80" height="60">
-                <progress class="skill-progress" value="80" max="100"></progress>
-                <label>TypeScript</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/cypress-icon.svg" alt="Cypress" width="80" height="60">
-                <progress class="skill-progress" value="90" max="100"></progress>
-                <label>Cypress</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/appium-icon.svg" alt="Appium" width="80" height="60">
-                <progress class="skill-progress" value="75" max="100"></progress>
-                <label>Appium</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/Postman-icon.svg" alt="Postman" width="80" height="60">
-                <progress class="skill-progress" value="80" max="100"></progress>
-                <label>Postman</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/performance-icon.svg" alt="Performance Testing" width="120" height="60">
-                <progress class="skill-progress" value="65" max="100"></progress>
-                <label>Performance Testing</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/database-icon.svg" alt="Database Testing" width="80" height="60">
-                <progress class="skill-progress" value="75" max="100"></progress>
-                <label>Database Testing</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/browserstack-icon.svg" alt="BrowserStack" width="80" height="60">
-                <progress class="skill-progress" value="70" max="100"></progress>
-                <label>BrowserStack</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/saucelabs-icon.svg" alt="SauceLabs" width="80" height="60">
-                <progress class="skill-progress" value="70" max="100"></progress>
-                <label>SauceLabs</label>
-            </div>
-           
-            <div class="skill-item">
-                <img src="path/to/wdio-icon.svg" alt="WDIO" width="80" height="60">
-                <progress class="skill-progress" value="80" max="100"></progress>
-                <label>WDIO</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/jenkins-icon.svg" alt="Jenkins" width="80" height="60">
-                <progress class="skill-progress" value="65" max="100"></progress>
-                <label>Jenkins</label>
-            </div>
-            <div class="skill-item">
-                <img src="path/to/github-icon.svg" alt="Github" width="80" height="60">
-                <progress class="skill-progress" value="65" max="100"></progress>
-                <label>Github</label>
-            </div>
-        </div>
-
-        <!-- Workflow Section -->
-        <div class="subheading mb-3">Testing Workflow</div>
-        <ul class="fa-ul mb-4">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Web Automation - Responsive Application</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Cross Browser Testing & Debugging</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Mobile Testing - Android/iOS</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Version Control - GitHub/GitLab</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>API Testing - Postman</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Performance Testing - JMeter</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Database Testing - Data Validation & Verification</li>
-        </ul>
-    </div>
-</section>
-
-
-            </section>          
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards" data-aos="fade-left">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-bec0867e-e630-43e2-9e8e-fb22f4c78d22.pdf" target="_blank" rel="noopener noreferrer">
-                                Cypress -Modern Automation Testing from Scratch with frameworks
-                            </a>
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-12dcd7a8-38de-492f-8279-af59a25ea005.pdf" target="_blank" rel="noopener noreferrer">
-                               Appium With WebdriverIO(Android/IOS)
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Footer Section -->
-<!-- Footer-->
-<footer class="footer-section" style="background-color: #0970d6; color: white; padding-top: 30px; padding-bottom: 30px;">
-    <div class="container">
-        <div class="row">
-            <!-- About Me Section -->
-            <div class="col-md-4">
-                <h4>About Me</h4>
-                <p>
-                    Passionate Software Quality Assurance professional with expertise in both manual and automation testing. 
-                    Focused on delivering quality through cutting-edge testing tools and methodologies. Let's connect and make great software together!
+                <p class="hero-desc">
+                    5+ years building bulletproof software through intelligent automation.
+                    Transforming quality engineering for fintech, SaaS &amp; mobile platforms
+                    across the full stack — UI, API, mobile, and CI/CD.
                 </p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-count="5">0</span>
+                        </div>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-count="60">0</span><span class="stat-suffix">%</span>
+                        </div>
+                        <span class="stat-label">Cycle Reduction</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-count="3">0</span>
+                        </div>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="mailto:saboormustafasdet@gmail.com" class="social-icon" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+351916866832" class="social-icon" title="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://github.com/saboormustafasdet" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
-            <!-- Quick Links Section -->
-            <div class="col-md-4">
-                <h4>Quick Links</h4>
-                <ul >
-                    <li><a href="#skills" style="color: white;">Skills</a></li>
-                    <li><a href="#experience" style="color: white;">Experience</a></li>
-                </ul>
+
+            <!-- Right: floating code window -->
+            <div class="hero-right">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">payment.spec.ts</span>
+                    </div>
+                    <pre class="code-content"><code><span class="code-keyword">import</span> { <span class="code-var">test</span>, <span class="code-var">expect</span> } <span class="code-keyword">from</span> <span class="code-string">'@playwright/test'</span>;
+<span class="code-keyword">import</span> { <span class="code-var">PaymentPage</span> } <span class="code-keyword">from</span> <span class="code-string">'./pages/PaymentPage'</span>;
+
+<span class="code-comment">// POM architecture — Saboor's signature</span>
+<span class="code-var">test</span>.<span class="code-fn">describe</span>(<span class="code-string">'Expense Approval Flow'</span>, () =&gt; {
+
+  <span class="code-var">test</span>.<span class="code-fn">beforeEach</span>(<span class="code-keyword">async</span> ({ <span class="code-var">page</span> }) =&gt; {
+    <span class="code-keyword">await</span> <span class="code-var">page</span>.<span class="code-fn">goto</span>(<span class="code-string">'/dashboard'</span>);
+  });
+
+  <span class="code-var">test</span>(<span class="code-string">'submits &amp; approves expense'</span>,
+    <span class="code-keyword">async</span> ({ <span class="code-var">page</span> }) =&gt; {
+      <span class="code-keyword">const</span> <span class="code-var">payment</span> = <span class="code-keyword">new</span> <span class="code-fn">PaymentPage</span>(<span class="code-var">page</span>);
+
+      <span class="code-keyword">await</span> <span class="code-var">payment</span>.<span class="code-fn">submitExpense</span>({ amount: <span class="code-num">1250.00</span> });
+      <span class="code-keyword">await</span> <span class="code-var">payment</span>.<span class="code-fn">approveChain</span>();
+
+      <span class="code-keyword">await</span> <span class="code-fn">expect</span>(<span class="code-var">page</span>)
+        .<span class="code-fn">toHaveURL</span>(<span class="code-string">'/reconciliation'</span>);
+      <span class="code-comment">// ✓ 847 assertions passed in 2.3s</span>
+  });
+});</code></pre>
+                </div>
+
+                <!-- Floating badges -->
+                <div class="float-badge badge-playwright">
+                    <i class="fas fa-circle-check"></i> Playwright
+                </div>
+                <div class="float-badge badge-ci">
+                    <i class="fas fa-infinity"></i> CI/CD
+                </div>
+                <div class="float-badge badge-mobile">
+                    <i class="fas fa-mobile-alt"></i> Mobile
+                </div>
             </div>
-            <!-- Connect with Me Section -->
-            <div class="col-md-4">
-                <h4>Connect with Me</h4>
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com/in/muhammad-shoaib-zahoor/" target="_blank" class="social-icon linkedin" style="color: white; text-decoration: none;">
-                        <i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://github.com/muhammad-shoaib-zahoor" target="_blank" class="social-icon github" style="color: white; text-decoration: none;">
-                        <i class="fab fa-github"></i> GitHub</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center" style="background-color: #495057; padding: 20px; border-radius: 5px; margin-top: 20px;">
-                <p>&copy; 2024 Muhammad Shoaib Zahoor. All Rights Reserved.</p>
-                <button class="cta-button" style="background-color: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;" onclick="window.location.href='https://wa.me/923428435418'">Contact Me via WhatsApp</button>
-            </div>
-        </div>
-    </div>
-</footer>         
         </div>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- AOS Library JS-->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+        <!-- Scroll cue -->
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ ABOUT ═══════════════════ -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">01 — About Me</span>
+                <h2 class="section-title">Quality is not an <span class="gradient-text">accident</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <p>Senior Software Development Engineer in Test (SDET) with <strong>5+ years of experience</strong> designing and implementing scalable automation frameworks for fintech platforms, SaaS systems, enterprise applications, and mobile platforms.</p>
+                    <p>Specialized in end-to-end automation testing across UI, API, and mobile applications using <strong>Playwright, Cypress, Selenium, and Appium</strong> with TypeScript and JavaScript.</p>
+                    <p>Expert in automation framework development using <strong>Page Object Model (POM), Behavior Driven Development (BDD), modular framework design, and data-driven testing</strong>. Strong experience integrating automated testing into CI/CD pipelines enabling continuous testing and faster software delivery.</p>
+                    <p>Skilled in <strong>API testing, contract testing, microservices testing, SQL database validation, cross-browser testing</strong>, cloud device testing using BrowserStack and Sauce Labs, and visual regression testing using Applitools.</p>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Fundao, Castelo Branco, Portugal</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:saboormustafasdet@gmail.com">saboormustafasdet@gmail.com</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+351916866832">+351 916 866 832</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Open to Remote Roles — SDET · QA Automation · QA Analyst</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-highlights" data-aos="fade-left">
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Automation Architect</h3>
+                        <p>Playwright, Cypress, Selenium, Appium — designed from scratch to production scale.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-infinity"></i></div>
+                        <h3>CI/CD Integration</h3>
+                        <p>Jenkins, GitHub Actions, GitLab CI — continuous testing baked into every pipeline.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Testing</h3>
+                        <p>Android &amp; iOS real device testing via Appium, WebDriverIO, BrowserStack &amp; Sauce Labs.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon"><i class="fas fa-database"></i></div>
+                        <h3>API &amp; DB Validation</h3>
+                        <p>REST API contract testing, Postman/Newman, and SQL database integrity verification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">02 — Experience</span>
+                <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+            </div>
+
+            <div class="timeline">
+
+                <!-- Job 1 -->
+                <div class="timeline-item active" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="job-title">Senior Software Development Engineer in Test</h3>
+                                <div class="company-name">
+                                    <span class="company-badge">Emagine Portugal</span>
+                                    <span class="company-type">Fintech Digital Solutions</span>
+                                </div>
+                            </div>
+                            <div class="date-badge">
+                                <i class="fas fa-calendar-alt"></i>
+                                2023 – Present
+                            </div>
+                        </div>
+                        <ul class="achievement-list">
+                            <li>Architect and maintain scalable UI automation frameworks using <strong>Playwright and Cypress</strong> with TypeScript supporting enterprise fintech applications</li>
+                            <li>Led mobile automation initiatives using <strong>Appium</strong> for Android and iOS platforms, significantly increasing automated regression coverage</li>
+                            <li>Integrated automated test suites into <strong>CI/CD pipelines</strong> using Jenkins, GitHub Actions, and GitLab CI enabling continuous testing</li>
+                            <li>Implemented <strong>API automation suites</strong> using Postman collections executed via Newman in CI pipelines for microservices testing</li>
+                            <li>Performed backend <strong>database validation</strong> using SQL ensuring financial data integrity across multiple environments</li>
+                            <li>Implemented <strong>visual regression testing</strong> using Applitools to detect UI inconsistencies before production releases</li>
+                            <li>Executed cross-browser and cross-device testing using <strong>BrowserStack and Sauce Labs</strong></li>
+                            <li>Improved regression execution efficiency by <span class="highlight-num">50%</span> through parallel test execution strategies</li>
+                            <li>Mentored junior QA engineers and improved automation architecture and quality engineering practices</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Playwright</span>
+                            <span class="tag">Cypress</span>
+                            <span class="tag">Appium</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">Newman</span>
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">GitLab CI</span>
+                            <span class="tag">BrowserStack</span>
+                            <span class="tag">Sauce Labs</span>
+                            <span class="tag">Applitools</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="0.1">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="job-title">Senior QA Automation Engineer</h3>
+                                <div class="company-name">
+                                    <span class="company-badge">Digital Horizon Systems</span>
+                                </div>
+                            </div>
+                            <div class="date-badge">
+                                <i class="fas fa-calendar-alt"></i>
+                                2021 – 2023
+                            </div>
+                        </div>
+                        <ul class="achievement-list">
+                            <li>Developed scalable automation frameworks using <strong>Playwright, Cypress, Katalon, and TestComplete</strong></li>
+                            <li>Automated REST API validation and integrated automated testing into CI/CD pipelines</li>
+                            <li>Reduced regression cycle time by <span class="highlight-num">60%</span> through parallel test execution and reusable automation utilities</li>
+                            <li>Implemented <strong>data-driven testing</strong> strategies significantly improving regression coverage</li>
+                            <li>Conducted risk-based testing and test planning for fintech transaction and reconciliation systems</li>
+                            <li>Improved automation reporting and dashboards increasing test visibility across engineering teams</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Playwright</span>
+                            <span class="tag">Cypress</span>
+                            <span class="tag">Katalon</span>
+                            <span class="tag">TestComplete</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="0.2">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="job-title">QA Engineer</h3>
+                                <div class="company-name">
+                                    <span class="company-badge">NextGen Software Labs</span>
+                                </div>
+                            </div>
+                            <div class="date-badge">
+                                <i class="fas fa-calendar-alt"></i>
+                                2019 – 2021
+                            </div>
+                        </div>
+                        <ul class="achievement-list">
+                            <li>Executed functional, regression, exploratory, and integration testing for enterprise SaaS platforms</li>
+                            <li>Designed and executed test cases based on test strategy and test planning documentation</li>
+                            <li>Built automation scripts using <strong>Selenium and Katalon</strong> supporting early automation initiatives</li>
+                            <li>Performed REST API testing using Postman and backend database validation using SQL</li>
+                            <li>Supported UAT cycles and release validation for web and mobile applications</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Selenium</span>
+                            <span class="tag">Katalon</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Manual Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">03 — Projects</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Featured: Fintech -->
+                <div class="project-card featured" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-status">
+                                <span class="status-dot"></span> Active
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Fintech &amp; Payments</span>
+                        <h3 class="project-title">Fintech Expense Payment Management Platform</h3>
+                        <p class="project-desc">Automated end-to-end workflows covering expense submission, multi-level approval chains, payments, and reconciliation. Designed a scalable Playwright automation framework using Page Object Model with API regression integrated directly into CI pipelines. Backend SQL validation ensures complete financial transaction accuracy across all environments.</p>
+                        <div class="project-highlights">
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>End-to-end expense &amp; payment workflow automation</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Scalable POM framework architecture in TypeScript</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>API regression suites integrated in CI pipeline</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>SQL validation for financial data integrity</span></div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="p-tag">Playwright</span>
+                            <span class="p-tag">TypeScript</span>
+                            <span class="p-tag">Postman</span>
+                            <span class="p-tag">Newman</span>
+                            <span class="p-tag">SQL</span>
+                            <span class="p-tag">GitHub Actions</span>
+                        </div>
+                        <span class="project-year">2024 – Present</span>
+                    </div>
+                </div>
+
+                <!-- Modus -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="0.1">
+                    <div class="project-header">
+                        <div class="project-icon icon-mobile">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Mobile — Android &amp; iOS</span>
+                        <h3 class="project-title">Modus — Mobile Application</h3>
+                        <p class="project-desc">Developed a mobile automation framework using Appium and WebDriverIO. Executed real device testing on Sauce Labs and BrowserStack across Android and iOS, automating authentication flows, onboarding, and critical user journeys.</p>
+                        <div class="project-highlights">
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Android &amp; iOS real device automation</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Appium + WebDriverIO POM framework</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Auth flows &amp; onboarding coverage</span></div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="p-tag">Appium</span>
+                            <span class="p-tag">WebDriverIO</span>
+                            <span class="p-tag">Sauce Labs</span>
+                            <span class="p-tag">BrowserStack</span>
+                        </div>
+                        <span class="project-year">2023 – 2024</span>
+                    </div>
+                </div>
+
+                <!-- OFTV -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="0.15">
+                    <div class="project-header">
+                        <div class="project-icon icon-stream">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Streaming Platform</span>
+                        <h3 class="project-title">OFTV — Video Streaming Platform</h3>
+                        <p class="project-desc">Built a Cypress automation framework covering UI and API validation. Conducted JMeter performance testing to validate streaming scalability and cross-browser testing via BrowserStack across multiple platforms.</p>
+                        <div class="project-highlights">
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Cypress UI &amp; API automation suite</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>JMeter streaming load testing</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Cross-browser &amp; multi-platform coverage</span></div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="p-tag">Cypress</span>
+                            <span class="p-tag">JMeter</span>
+                            <span class="p-tag">BrowserStack</span>
+                        </div>
+                        <span class="project-year">2023 – 2024</span>
+                    </div>
+                </div>
+
+                <!-- Scan123 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="0.2">
+                    <div class="project-header">
+                        <div class="project-icon icon-doc">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Enterprise SaaS</span>
+                        <h3 class="project-title">Scan123 — SaaS Workflow Automation</h3>
+                        <p class="project-desc">Automated document processing workflows and approval chains for an enterprise document management SaaS. Implemented Applitools visual validation and integrated automation into CI/CD release pipelines.</p>
+                        <div class="project-highlights">
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Document workflow end-to-end automation</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Applitools visual regression testing</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>CI/CD release pipeline integration</span></div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="p-tag">Katalon</span>
+                            <span class="p-tag">Applitools</span>
+                            <span class="p-tag">CI/CD</span>
+                        </div>
+                        <span class="project-year">2022 – 2023</span>
+                    </div>
+                </div>
+
+                <!-- Planera -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="0.25">
+                    <div class="project-header">
+                        <div class="project-icon icon-build">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Construction Tech</span>
+                        <h3 class="project-title">Planera — Construction Planning SaaS</h3>
+                        <p class="project-desc">Contributed Cypress-based UI automation for a collaborative CPM construction planning platform. Stabilized flaky tests by implementing retry mechanisms and improved selector strategies. Integrated automation into CI pipelines enabling continuous regression.</p>
+                        <div class="project-highlights">
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Flaky test stabilization &amp; retry logic</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>Improved dynamic selector strategies</span></div>
+                            <div class="p-highlight"><i class="fas fa-check-circle"></i><span>CI pipeline automated regression</span></div>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="p-tag">Cypress</span>
+                            <span class="p-tag">TypeScript</span>
+                            <span class="p-tag">CI/CD</span>
+                        </div>
+                        <span class="project-year">2022</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ SKILLS ═══════════════════ -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">04 — Skills</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+            </div>
+
+            <div class="skills-container">
+
+                <!-- Languages -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-pills">
+                        <div class="skill-pill">
+                            <img src="path/to/typescript-icon.svg" alt="TypeScript" />
+                            <span>TypeScript</span>
+                            <div class="skill-level expert">Expert</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/Javascript-icon.svg" alt="JavaScript" />
+                            <span>JavaScript</span>
+                            <div class="skill-level expert">Expert</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/database-icon.svg" alt="SQL" />
+                            <span>SQL</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Frameworks -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="0.05">
+                    <h3 class="category-title"><i class="fas fa-vial"></i> Test Frameworks</h3>
+                    <div class="skill-pills">
+                        <div class="skill-pill">
+                            <span class="pill-icon">PW</span>
+                            <span>Playwright</span>
+                            <div class="skill-level expert">Expert</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/cypress-icon.svg" alt="Cypress" />
+                            <span>Cypress</span>
+                            <div class="skill-level expert">Expert</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">SE</span>
+                            <span>Selenium</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/appium-icon.svg" alt="Appium" />
+                            <span>Appium</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">KS</span>
+                            <span>Katalon Studio</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">TC</span>
+                            <span>TestComplete</span>
+                            <div class="skill-level proficient">Proficient</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API Testing -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="0.1">
+                    <h3 class="category-title"><i class="fas fa-network-wired"></i> API Testing</h3>
+                    <div class="skill-pills">
+                        <div class="skill-pill">
+                            <img src="path/to/Postman-icon.svg" alt="Postman" />
+                            <span>Postman</span>
+                            <div class="skill-level expert">Expert</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">NW</span>
+                            <span>Newman</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">CT</span>
+                            <span>Contract Testing</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">MS</span>
+                            <span>Microservices Testing</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Testing -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="0.15">
+                    <h3 class="category-title"><i class="fas fa-mobile-alt"></i> Mobile Testing</h3>
+                    <div class="skill-pills">
+                        <div class="skill-pill">
+                            <img src="path/to/appium-icon.svg" alt="Appium" />
+                            <span>Appium</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/wdio-icon.svg" alt="WebDriverIO" />
+                            <span>WebDriverIO</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">AN</span>
+                            <span>Android Testing</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">iOS</span>
+                            <span>iOS Testing</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Platforms -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="0.2">
+                    <h3 class="category-title"><i class="fas fa-cloud"></i> Cloud &amp; Visual</h3>
+                    <div class="skill-pills">
+                        <div class="skill-pill">
+                            <img src="path/to/browserstack-icon.svg" alt="BrowserStack" />
+                            <span>BrowserStack</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/saucelabs-icon.svg" alt="Sauce Labs" />
+                            <span>Sauce Labs</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">AT</span>
+                            <span>Applitools</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/performance-icon.svg" alt="JMeter" />
+                            <span>JMeter</span>
+                            <div class="skill-level proficient">Proficient</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CI/CD -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="0.25">
+                    <h3 class="category-title"><i class="fas fa-infinity"></i> CI/CD &amp; DevOps</h3>
+                    <div class="skill-pills">
+                        <div class="skill-pill">
+                            <img src="path/to/jenkins-icon.svg" alt="Jenkins" />
+                            <span>Jenkins</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <img src="path/to/github-icon.svg" alt="GitHub Actions" />
+                            <span>GitHub Actions</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                        <div class="skill-pill">
+                            <span class="pill-icon">GL</span>
+                            <span>GitLab CI</span>
+                            <div class="skill-level advanced">Advanced</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Methodologies grid -->
+            <div class="methodologies" data-aos="fade-up">
+                <h3 class="meth-title">Testing Methodologies &amp; Practices</h3>
+                <div class="meth-grid">
+                    <div class="meth-item"><i class="fas fa-sitemap"></i> Page Object Model (POM)</div>
+                    <div class="meth-item"><i class="fas fa-leaf"></i> BDD / Gherkin</div>
+                    <div class="meth-item"><i class="fas fa-table"></i> Data-Driven Testing</div>
+                    <div class="meth-item"><i class="fas fa-layer-group"></i> Modular Framework Design</div>
+                    <div class="meth-item"><i class="fas fa-eye"></i> Visual Regression Testing</div>
+                    <div class="meth-item"><i class="fas fa-tachometer-alt"></i> Performance Testing</div>
+                    <div class="meth-item"><i class="fas fa-shield-alt"></i> Risk-Based Testing</div>
+                    <div class="meth-item"><i class="fas fa-search"></i> Exploratory Testing</div>
+                    <div class="meth-item"><i class="fas fa-sync-alt"></i> Agile / Scrum</div>
+                    <div class="meth-item"><i class="fas fa-microscope"></i> Contract Testing</div>
+                    <div class="meth-item"><i class="fas fa-boxes"></i> Parallel Execution</div>
+                    <div class="meth-item"><i class="fas fa-clipboard-check"></i> Test Planning &amp; Strategy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ CERTIFICATIONS ═══════════════════ -->
+    <section class="section cert-section" id="certifications">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">05 — Credentials</span>
+                <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
+            </div>
+
+            <div class="creds-grid">
+                <div class="education-card" data-aos="fade-right">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>Bachelor of Science</h3>
+                        <h4>Software Engineering</h4>
+                        <p class="edu-note">Foundation in software development, systems design, quality engineering, and software testing life cycles.</p>
+                    </div>
+                    <div class="edu-glow"></div>
+                </div>
+
+                <div class="certs-list" data-aos="fade-left">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-content">
+                            <span class="cert-issuer">Certification</span>
+                            <h4>Advanced Playwright Automation with Applitools</h4>
+                            <p>Visual regression testing integration with the modern Playwright framework at enterprise scale.</p>
+                        </div>
+                        <div class="cert-badge"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-content">
+                            <span class="cert-issuer">Certification</span>
+                            <h4>Cypress — Modern Automation Testing from Scratch + Frameworks</h4>
+                            <p>Full Cypress framework development from fundamentals to advanced architecture patterns.</p>
+                        </div>
+                        <div class="cert-badge"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-content">
+                            <span class="cert-issuer">Certification</span>
+                            <h4>Appium with WebDriverIO — Mobile Automation (Android / iOS)</h4>
+                            <p>Complete mobile automation framework development for both Android and iOS real-device testing.</p>
+                        </div>
+                        <div class="cert-badge"><i class="fas fa-check"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ CONTACT ═══════════════════ -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">06 — Contact</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-sub">Open to remote roles — Senior SDET, QA Automation Engineer, and QA Analyst positions.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">Email</span>
+                                <a href="mailto:saboormustafasdet@gmail.com">saboormustafasdet@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fas fa-phone"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">Phone</span>
+                                <a href="tel:+351916866832">+351 916 866 832</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">Location</span>
+                                <span>Fundao, Castelo Branco, Portugal</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="c-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">Availability</span>
+                                <span>Remote Only — Open Now</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="mailto:saboormustafasdet@gmail.com" class="social-btn">
+                            <i class="fas fa-envelope"></i><span>Email Me</span>
+                        </a>
+                        <a href="https://github.com/saboormustafasdet" target="_blank" rel="noopener" class="social-btn">
+                            <i class="fab fa-github"></i><span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-visual" data-aos="fade-left">
+                    <div class="terminal-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="window-title">contact.sh</span>
+                        </div>
+                        <div class="terminal-content">
+                            <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+                            <p class="t-output">Saboor Mustafa — Senior SDET</p>
+                            <br/>
+                            <p><span class="t-prompt">$</span> <span class="t-cmd">cat availability.txt</span></p>
+                            <p class="t-output">Status: <span class="t-green">Open to remote roles</span></p>
+                            <p class="t-output">Type: Remote Only</p>
+                            <p class="t-output">Roles: SDET · QA Automation · QA Analyst</p>
+                            <br/>
+                            <p><span class="t-prompt">$</span> <span class="t-cmd">echo $EXPERTISE</span></p>
+                            <p class="t-output">Playwright · Cypress · Appium</p>
+                            <p class="t-output">CI/CD · API Testing · Mobile</p>
+                            <br/>
+                            <p><span class="t-prompt">$</span> <span class="t-cmd">ping saboormustafasdet@gmail.com<span class="t-blink">_</span></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>SM<span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-tagline">Crafted with precision. Tested with passion.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="footer-copy">&copy; 2024 Saboor Mustafa &mdash; Senior SDET &amp; Quality Engineer</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/scripts.js"></script>
+</body>
 </html>
-   
